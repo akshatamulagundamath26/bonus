@@ -1,14 +1,14 @@
-# salary_bonus.py
-
-def calculate_bonus():
-    try:
-        salary = float(input("Enter employee's salary: ₹"))
-        bonus = salary * 0.10
-        total = salary + bonus
-        print(f"Bonus Amount: ₹{bonus:.2f}")
-        print(f"Total Salary after Bonus: ₹{total:.2f}")
-    except ValueError:
-        print("Invalid input. Please enter a numeric salary.")
-
-if __name__ == "__main__":
-    calculate_bonus()
+import sys
+if len(sys.argv) ==2:
+    script_name=sys.argv[0]
+    salary=sys.argv[1]
+    print("user provides values")
+else:
+    script_name=sys.argv[0]
+    salary="50000"
+    print("user does not provide values")
+bonus=0.1*int(salary)
+total_salary=int(salary)+bonus
+print("Script Name:",script_name)
+print("Salary:",salary)
+print("Bonus:",bonus)
